@@ -34,3 +34,7 @@ public class validAnagram {
        
     }
 }
+
+// Input: s = "racecar", t = "carrace"
+
+// Output: true
