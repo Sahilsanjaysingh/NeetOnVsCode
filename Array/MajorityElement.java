@@ -36,5 +36,26 @@ public static void main(String[] args) {
         return  -1;
     }
    }
-    
+
+   
 }
+// HashMap= HashMap is data Structure that stores element in key-Value pairs, where each key-values pairs, where each key is unoque and null to a value. it widely used when we need to associate one value with other.
+//    Allow one null key and multiple null values
+//    use pull()method to insert elements
+
+
+// Hahset= is a collection that stores on;y unique element and close does not allow dullicate. it is useful when we only care about distinct values.
+// allows only one null value
+// Use add() methos to insert elements
+
+
+
+
+// HashMap vs HashSet
+//       HashMap	                                              HashSet
+// Stores key-value pairs	                         Stores only unique elements
+// Keys are unique, values can repeat               No duplicate elements allowed
+// Allows one null key and multiple null values	 Allows only one null value
+// Uses put() method	                             Uses add() method
+// Implements Map interface	                     Implements Set interface
+// Used for mapping data	                         Used for storing unique values
