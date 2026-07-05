@@ -23,18 +23,29 @@ public class Sorting {
     static  class Solution{
         public int []Sortingalgo(int[] nums){
             //Bubble sort algo 
-            for(int i=0;i<nums.length; i++){
-                for(int j=0; j<nums.length-1; j++){
-                    if(nums[j]> nums[j+1]){
-                        int temp= nums[j];
-                        nums[j]=nums[j+1];
-                        nums[j+1]=temp;
+            // for(int i=0;i<nums.length; i++){
+            //     for(int j=0; j<nums.length-1; j++){
+            //         if(nums[j]> nums[j+1]){
+            //             int temp= nums[j];
+            //             nums[j]=nums[j+1];
+            //             nums[j+1]=temp;
+            //         }
+            //     }
+            // }
+
+
+                // SElection Sort
+            for(int i=0; i<nums.length-1; i++){
+                int minnumber=i;
+                for(int j= i+1; j<nums.length; j++){
+                    if(nums[j]<nums[minnumber]){
+                        minnumber=j;
                     }
                 }
-            }
-
-
-                 
+                int temp= nums[minnumber];
+                nums[minnumber]=nums[i];
+                nums[i]=temp;
+            } 
             return nums;
         }
     }
