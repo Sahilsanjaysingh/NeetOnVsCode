@@ -13,11 +13,39 @@ public class Validpalindrome {
     }
     static class Solution{
         public boolean Valid(String str){
-            
-            while(i<j){
+            // clean the string 
+            StringBuilder rSpace= new StringBuilder();
 
+            for(char ch : str.toCharArray()){
+                if(Character.isLetterOrDigit(ch)){
+                    rSpace.append(Character.toLowerCase(ch));
+                }
             }
-            return true;
+
+            //convert to chr array
+            char[] arr= rSpace.toString().toCharArray();
+
+
+            // Reverse the array
+
+            int i =0;
+            int j=arr.length-1;
+
+            while(i<j){
+                char temp = arr[i];
+                arr[i]= arr[j];
+                arr[j]= temp;
+                i++;
+                j--;
+            }
+
+            // Convert reversed array into string
+            String reversed= new String(arr);
+
+            //compare with cleaned original string 
+            return rSpace.toString().equals(reversed);
+            
+            
         }
 
     }
